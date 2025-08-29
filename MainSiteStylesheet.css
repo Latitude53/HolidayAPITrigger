@@ -1,0 +1,42 @@
+  body, html {
+    height: 100vh;
+    margin: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  .center-container {
+    flex-grow: 1;             /* takes up the remaining space on screen, without overflow to prevent scroll */
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */           /* Full viewport height */
+  }
+
+  .centered-box {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  #logo {
+    height: 50px; /* adjust size */
+    width: auto;
+  }
+
+  p {
+    color: #333;
+    font-size: 25px;
+    font-family: Calibri, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+  }
