@@ -36,21 +36,6 @@ function getResponseString(response, prefix = '') {
 window.onload = function() {
   // extract parameters from URL
   const params = new URLSearchParams(window.location.search);
-
-/*
-  for (const [key, value] of params.entries()) {
-    console.log(`${key}: ${value}`);
-  }
-*/
-  console.log(params.get('items'));
-  const items = JSON.parse(decodeURIComponent(params.get('items')));
-  for (const item of items) {
-    for (const [key, value] of item.entries()) {
-      console.log(`${key}: ${value}`);
-    }
-  }
-  return;
-
   const apiUrl = decodeURIComponent(params.get('apiUrl')); // this is encoded in Power Apps
   const itemIDsRaw = params.get('itemIDs');
   const itemIDsArray = itemIDsRaw.split(',').map(Number);
